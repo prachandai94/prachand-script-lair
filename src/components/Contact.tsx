@@ -37,9 +37,9 @@ export const Contact = () => {
       <section id="contact" className="py-24 bg-background-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="glass rounded-2xl p-12">
-              <CheckCircle className="w-16 h-16 text-neon-red mx-auto mb-6" />
-              <h2 className="font-display text-3xl font-bold mb-4 text-text-primary">
+            <div className="paper rounded-2xl p-12">
+              <CheckCircle className="w-16 h-16 text-samurai-red mx-auto mb-6" />
+              <h2 className="font-display text-3xl font-bold mb-4 text-text-primary brush-stroke">
                 Pitch Received!
               </h2>
               <p className="text-text-secondary mb-6">
@@ -61,9 +61,9 @@ export const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Pitch Your <span className="text-neon-red">Project</span>
+            Pitch Your <span className="text-samurai-red brush-stroke">Project</span>
           </h2>
-          <div className="neon-divider mb-8 max-w-xs mx-auto" />
+          <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Ready to bring your story to life? Share your vision with us and 
             let's start crafting something extraordinary together.
@@ -71,7 +71,7 @@ export const Contact = () => {
         </div>
 
         <div className="max-w-2xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="paper rounded-2xl p-8 space-y-6">
             {/* Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -81,7 +81,7 @@ export const Contact = () => {
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
                   required
-                  className="bg-background-secondary/50 border-glass-border text-text-primary placeholder:text-text-muted focus:border-neon-red"
+                  className="bg-background-secondary/50 border-paper-border text-text-primary placeholder:text-text-muted focus:border-samurai-red"
                   placeholder="Your full name"
                 />
               </div>
@@ -93,7 +93,7 @@ export const Contact = () => {
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
                   required
-                  className="bg-background-secondary/50 border-glass-border text-text-primary placeholder:text-text-muted focus:border-neon-red"
+                  className="bg-background-secondary/50 border-paper-border text-text-primary placeholder:text-text-muted focus:border-samurai-red"
                   placeholder="your@email.com"
                 />
               </div>
@@ -107,17 +107,17 @@ export const Contact = () => {
                   id="company"
                   value={formData.company}
                   onChange={(e) => handleInputChange("company", e.target.value)}
-                  className="bg-background-secondary/50 border-glass-border text-text-primary placeholder:text-text-muted focus:border-neon-red"
+                  className="bg-background-secondary/50 border-paper-border text-text-primary placeholder:text-text-muted focus:border-samurai-red"
                   placeholder="Your company name"
                 />
               </div>
               <div className="space-y-2">
                 <Label className="text-text-primary">Project Type *</Label>
                 <Select onValueChange={(value) => handleInputChange("projectType", value)}>
-                  <SelectTrigger className="bg-background-secondary/50 border-glass-border text-text-primary focus:border-neon-red">
+                  <SelectTrigger className="bg-background-secondary/50 border-paper-border text-text-primary focus:border-samurai-red">
                     <SelectValue placeholder="Select project type" />
                   </SelectTrigger>
-                  <SelectContent className="bg-background border-glass-border">
+                  <SelectContent className="bg-background border-paper-border">
                     <SelectItem value="feature-film">Feature Film</SelectItem>
                     <SelectItem value="tv-series">TV Series/Pilot</SelectItem>
                     <SelectItem value="digital-content">Digital/Short Content</SelectItem>
@@ -139,7 +139,7 @@ export const Contact = () => {
                 onChange={(e) => handleInputChange("brief", e.target.value)}
                 required
                 rows={6}
-                className="bg-background-secondary/50 border-glass-border text-text-primary placeholder:text-text-muted focus:border-neon-red resize-none"
+                className="bg-background-secondary/50 border-paper-border text-text-primary placeholder:text-text-muted focus:border-samurai-red resize-none"
                 placeholder="Tell us about your project: concept, genre, target audience, timeline, and any specific requirements..."
               />
             </div>
@@ -150,7 +150,7 @@ export const Contact = () => {
                 id="nda"
                 checked={formData.nda}
                 onCheckedChange={(checked) => handleInputChange("nda", checked as boolean)}
-                className="border-glass-border data-[state=checked]:bg-neon-red data-[state=checked]:border-neon-red"
+                className="border-paper-border data-[state=checked]:bg-samurai-red data-[state=checked]:border-samurai-red"
               />
               <Label htmlFor="nda" className="text-text-secondary text-sm">
                 I would like to discuss this project under NDA
@@ -160,7 +160,7 @@ export const Contact = () => {
             {/* Submit Button */}
             <Button 
               type="submit" 
-              variant="neon" 
+              variant="samurai" 
               size="lg" 
               className="w-full group"
             >

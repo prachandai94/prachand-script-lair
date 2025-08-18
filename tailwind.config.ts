@@ -24,15 +24,16 @@ export default {
 					secondary: 'hsl(var(--background-secondary))'
 				},
 				foreground: 'hsl(var(--foreground))',
-				neon: {
-					red: 'hsl(var(--neon-red))',
-					'red-dark': 'hsl(var(--neon-red-dark))',
-					magenta: 'hsl(var(--magenta-accent))'
+				samurai: {
+					red: 'hsl(var(--samurai-red))',
+					'red-light': 'hsl(var(--samurai-red-light))',
+					'red-dark': 'hsl(var(--samurai-red-dark))',
+					accent: 'hsl(var(--samurai-accent))'
 				},
-				glass: {
-					DEFAULT: 'hsl(var(--glass))',
-					border: 'hsl(var(--glass-border))',
-					hover: 'hsl(var(--glass-hover))'
+				paper: {
+					DEFAULT: 'hsl(var(--paper))',
+					border: 'hsl(var(--paper-border))',
+					hover: 'hsl(var(--paper-hover))'
 				},
 				text: {
 					primary: 'hsl(var(--text-primary))',
@@ -74,9 +75,9 @@ export default {
 				'slide-up': 'slide-up 0.8s ease-out'
 			},
 			boxShadow: {
-				'glow-red': '0 0 20px hsla(351, 100%, 55%, 0.3)',
-				'glow-red-strong': '0 0 30px hsla(351, 100%, 55%, 0.5)',
-				'glass': '0 8px 32px hsla(240, 5%, 0%, 0.4)'
+				'shadow-red': '0 4px 20px hsla(0, 75%, 45%, 0.15)',
+				'shadow-red-strong': '0 8px 30px hsla(0, 75%, 45%, 0.25)',
+				'paper': '0 2px 8px hsla(0, 0%, 0%, 0.08)'
 			}
 		}
 	},

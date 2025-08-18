@@ -10,12 +10,12 @@ export const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Creative Chaos <span className="text-neon-red">Tamed</span>
+            Disciplined <span className="text-samurai-red brush-stroke">Craft</span> Mastered
           </h2>
-          <div className="neon-divider mb-8 max-w-xs mx-auto" />
+          <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
-            Stories hit harder when crafted in the room. Our 11+ writers bring distinct voices, 
-            shared discipline, and a production-ready mindset to every brief.
+            Like samurai perfecting their craft, our 11+ writers forge stories with precision and honor. 
+            Each narrative is tempered through rigorous collaboration, creating compelling tales.
           </p>
           <p className="text-text-muted max-w-2xl mx-auto">
             With over a decade of collective experience across film, television, digital platforms, 
@@ -27,8 +27,8 @@ export const About = () => {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
-            <div key={index} className="glass-hover rounded-2xl p-8 text-center group">
-              <div className="text-4xl md:text-5xl font-display font-bold text-neon-red mb-3 group-hover:animate-glow-pulse">
+            <div key={index} className="paper-hover rounded-2xl p-8 text-center group">
+              <div className="text-4xl md:text-5xl font-display font-bold text-samurai-red mb-3">
                 {stat.number}
               </div>
               <div className="text-xl font-semibold text-text-primary mb-2">

@@ -4,7 +4,7 @@ import logo from "@/assets/logo.png";
 
 export const PreFooterCTA = () => {
   return (
-    <section className="py-16 border-t border-glass-border bg-background-secondary/50">
+    <section className="py-16 border-t border-paper-border bg-background-secondary/50">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
           {/* Left: Brand Logo */}
@@ -12,15 +12,15 @@ export const PreFooterCTA = () => {
             <img src={logo} alt="Prachand Scripts" className="h-12 w-auto" />
           </div>
 
-          {/* Center: Neon Divider */}
+          {/* Center: Samurai Divider */}
           <div className="flex-1 flex items-center justify-center">
-            <div className="w-px md:w-full md:h-px h-16 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-neon-red to-transparent glow-red" />
+            <div className="w-px md:w-full md:h-px h-16 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-samurai-red to-transparent shadow-red" />
           </div>
 
           {/* Right: Visit Mother Website Button */}
           <div className="flex-shrink-0">
             <Button 
-              variant="neon" 
+              variant="samurai" 
               size="lg"
               onClick={() => window.open("https://www.prachandentertainment.com/", "_blank")}
               className="group px-12 py-4 text-lg"

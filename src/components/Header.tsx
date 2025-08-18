@@ -48,7 +48,7 @@ export const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass backdrop-blur-lg border-b border-glass-border" : "bg-transparent"
+        isScrolled ? "paper backdrop-blur-lg border-b border-paper-border" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -69,13 +69,13 @@ export const Header = () => {
                 onClick={() => scrollToSection(item.id)}
                 className={`text-sm font-medium transition-colors relative ${
                   activeSection === item.id 
-                    ? "text-neon-red" 
-                    : "text-text-secondary hover:text-neon-red"
+                    ? "text-samurai-red" 
+                    : "text-text-secondary hover:text-samurai-red"
                 }`}
               >
                 {item.label}
                 {activeSection === item.id && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-neon-red glow-red" />
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-samurai-red shadow-red" />
                 )}
               </button>
             ))}
@@ -83,7 +83,7 @@ export const Header = () => {
 
           {/* CTA Button */}
           <Button 
-            variant="neon" 
+            variant="samurai" 
             size="default"
             onClick={() => scrollToSection("contact")}
           >

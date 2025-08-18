@@ -51,21 +51,21 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight">
-          <span className="text-text-primary">Creative</span>
+          <span className="text-text-primary">If the Sword</span>
           <br />
-          <span className="text-neon-red glow-red">Chaos</span>
+          <span className="text-samurai-red brush-stroke shadow-red">Became a Pen</span>
           <br />
-          <span className="text-text-primary">Tamed</span>
+          <span className="text-text-primary">We are Samurai of Today</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto mb-12 leading-relaxed">
-          Original scripts and story development by Prachand Entertainment's in-house writers' room—built to move audiences across film, television, digital, and advertising.
+          Disciplined storytelling forged by Prachand Entertainment's warrior scribes. We craft narratives with precision, honor, and cinematic vision—turning concepts into compelling stories across all mediums.
         </p>
         
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button 
-            variant="neon" 
+            variant="samurai" 
             size="lg"
             onClick={scrollToContact}
             className="group"
@@ -86,12 +86,12 @@ export const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-neon-red rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-neon-red rounded-full mt-2 animate-pulse" />
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-samurai-red rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-samurai-red rounded-full mt-2 animate-pulse" />
+          </div>
         </div>
-      </div>
     </section>
   );
 };

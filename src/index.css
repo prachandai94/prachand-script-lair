@@ -4,45 +4,45 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&display=swap');
 
-/* Prachand Scripts Dark Theme Design System */
+/* Prachand Scripts Japanese Samurai Theme Design System */
 
 @layer base {
   :root {
-    /* Dark Premium Theme */
-    --background: 240 6% 4%;
-    --background-secondary: 240 5% 7%;
-    --foreground: 0 0% 95%;
+    /* Japanese Minimalist Theme */
+    --background: 0 0% 98%;
+    --background-secondary: 0 0% 95%;
+    --foreground: 0 0% 8%;
     
-    /* Neon Red Brand Colors */
-    --neon-red: 351 100% 55%;
-    --neon-red-glow: 351 100% 55%;
-    --neon-red-dark: 351 100% 45%;
-    --magenta-accent: 320 100% 70%;
+    /* Samurai Red Brand Colors */
+    --samurai-red: 0 75% 45%;
+    --samurai-red-light: 0 75% 55%;
+    --samurai-red-dark: 0 75% 35%;
+    --samurai-accent: 0 60% 40%;
     
-    /* Glass/Panel System */
-    --glass: 240 5% 8%;
-    --glass-border: 240 5% 15%;
-    --glass-hover: 240 5% 12%;
+    /* Paper/Panel System */
+    --paper: 0 0% 100%;
+    --paper-border: 0 0% 90%;
+    --paper-hover: 0 0% 97%;
     
     /* Text Hierarchy */
-    --text-primary: 0 0% 95%;
-    --text-secondary: 0 0% 70%;
-    --text-muted: 0 0% 50%;
+    --text-primary: 0 0% 8%;
+    --text-secondary: 0 0% 25%;
+    --text-muted: 0 0% 45%;
     
     /* Interactive States */
-    --hover-glow: 351 100% 55%;
-    --focus-ring: 351 100% 55%;
+    --hover-red: 0 75% 45%;
+    --focus-ring: 0 75% 45%;
     
-    /* Shadows & Glows */
-    --glow-red: 0 0 20px hsla(351, 100%, 55%, 0.3);
-    --glow-red-strong: 0 0 30px hsla(351, 100%, 55%, 0.5);
-    --shadow-glass: 0 8px 32px hsla(240, 5%, 0%, 0.4);
+    /* Shadows & Effects */
+    --shadow-red: 0 4px 20px hsla(0, 75%, 45%, 0.15);
+    --shadow-red-strong: 0 8px 30px hsla(0, 75%, 45%, 0.25);
+    --shadow-paper: 0 2px 8px hsla(0, 0%, 0%, 0.08);
     
     /* Typography Scale */
-    --font-display: 'Bebas Neue', sans-serif;
+    --font-display: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
     
-    --radius: 12px;
+    --radius: 8px;
   }
 }
 
@@ -71,47 +71,62 @@
 }
 
 @layer components {
-  /* Glow Effects */
-  .glow-red {
-    box-shadow: var(--glow-red);
+  /* Samurai Red Effects */
+  .shadow-red {
+    box-shadow: var(--shadow-red);
   }
   
-  .glow-red-strong {
-    box-shadow: var(--glow-red-strong);
+  .shadow-red-strong {
+    box-shadow: var(--shadow-red-strong);
   }
   
-  /* Glass Morphism */
-  .glass {
-    background: hsla(var(--glass), 0.8);
-    backdrop-filter: blur(16px);
-    border: 1px solid hsl(var(--glass-border));
-    box-shadow: var(--shadow-glass);
+  /* Paper Morphism */
+  .paper {
+    background: hsl(var(--paper));
+    border: 1px solid hsl(var(--paper-border));
+    box-shadow: var(--shadow-paper);
   }
   
-  .glass-hover {
+  .paper-hover {
     transition: all 0.3s ease;
   }
   
-  .glass-hover:hover {
-    background: hsla(var(--glass-hover), 0.9);
+  .paper-hover:hover {
+    background: hsl(var(--paper-hover));
     transform: translateY(-2px);
-    box-shadow: var(--glow-red), var(--shadow-glass);
+    box-shadow: var(--shadow-red), var(--shadow-paper);
   }
   
-  /* Neon Divider */
-  .neon-divider {
-    background: linear-gradient(90deg, transparent, hsl(var(--neon-red)), transparent);
-    height: 1px;
-    box-shadow: var(--glow-red);
+  /* Samurai Divider */
+  .samurai-divider {
+    background: linear-gradient(90deg, transparent, hsl(var(--samurai-red)), transparent);
+    height: 2px;
+    box-shadow: var(--shadow-red);
+  }
+  
+  /* Brush Stroke Effect */
+  .brush-stroke {
+    position: relative;
+  }
+  
+  .brush-stroke::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--samurai-red)) 20%, hsl(var(--samurai-red)) 80%, transparent 100%);
+    opacity: 0.7;
   }
   
   /* Cursor Follow Effect */
   .cursor-glow {
     position: fixed;
     pointer-events: none;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, hsla(var(--neon-red), 0.1) 0%, transparent 70%);
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, hsla(var(--samurai-red), 0.05) 0%, transparent 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
@@ -146,11 +161,11 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--neon-red));
+    background: hsl(var(--samurai-red));
     border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--neon-red-dark));
+    background: hsl(var(--samurai-red-dark));
   }
 }

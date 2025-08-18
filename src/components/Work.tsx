@@ -92,7 +92,7 @@ export const Work = () => {
                 </p>
                 
                 <div className="flex gap-3">
-                  <Button variant="glass" size="sm" className="flex-1">
+                  <Button variant="paper" size="sm" className="flex-1">
                     <Eye className="w-4 h-4 mr-2" />
                     View Excerpt
                   </Button>
