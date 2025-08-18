@@ -5,29 +5,24 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neon-red disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 relative overflow-hidden",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        neon: "bg-neon-red text-white rounded-full px-8 py-3 font-semibold shadow-glow-red hover:shadow-glow-red-strong hover:bg-neon-red-dark transform hover:scale-105",
+        outline: "border border-neon-red text-neon-red rounded-full px-8 py-3 font-semibold hover:bg-neon-red hover:text-white hover:shadow-glow-red",
+        ghost: "text-text-secondary hover:text-neon-red transition-colors",
+        glass: "glass text-text-primary hover:text-neon-red border border-glass-border rounded-xl px-6 py-3 glass-hover",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10",
+        default: "h-12 px-6",
+        sm: "h-10 px-4 text-xs",
+        lg: "h-14 px-10 text-base",
+        icon: "h-12 w-12",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "neon",
       size: "default",
     },
   }
