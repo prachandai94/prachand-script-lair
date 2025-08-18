@@ -49,8 +49,8 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
       
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 tracking-tight leading-none">
           <span className="text-text-primary">If the Sword</span>
           <br />
           <span className="text-samurai-red brush-stroke shadow-red">Became a Pen</span>
@@ -58,17 +58,17 @@ export const Hero = () => {
           <span className="text-text-primary">We are Samurai of Today</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
           Disciplined storytelling forged by Prachand Entertainment's warrior scribes. We craft narratives with precision, honor, and cinematic vision—turning concepts into compelling stories across all mediums.
         </p>
         
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
           <Button 
             variant="samurai" 
             size="lg"
             onClick={scrollToContact}
-            className="group"
+            className="group w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
           >
             Pitch a Project
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -78,7 +78,7 @@ export const Hero = () => {
             variant="outline" 
             size="lg"
             onClick={() => window.open("https://www.prachandentertainment.com/", "_blank")}
-            className="group"
+            className="group w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
           >
             Visit Mother Website
             <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />

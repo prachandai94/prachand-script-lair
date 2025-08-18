@@ -73,7 +73,7 @@ export const Contact = () => {
         <div className="max-w-2xl mx-auto">
           <form onSubmit={handleSubmit} className="paper rounded-2xl p-8 space-y-6">
             {/* Name and Email */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-text-primary">Name *</Label>
                 <Input
@@ -162,7 +162,7 @@ export const Contact = () => {
               type="submit" 
               variant="samurai" 
               size="lg" 
-              className="w-full group"
+              className="w-full group h-12 text-base"
             >
               Send Project Brief
               <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

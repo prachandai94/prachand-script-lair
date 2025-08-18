@@ -41,13 +41,13 @@ export const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-background-secondary/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Our <span className="text-neon-red">Services</span>
+    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-background-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-text-primary">
+            Our <span className="text-samurai-red brush-stroke">Services</span>
           </h2>
-          <div className="neon-divider mb-8 max-w-xs mx-auto" />
+          <div className="samurai-divider mb-6 sm:mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             From spark to screenplay, we deliver production-ready scripts 
             across every format and platform.

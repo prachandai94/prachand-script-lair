@@ -87,16 +87,16 @@ export const Work = () => {
                   {project.title}
                 </h3>
                 
-                <p className="text-text-secondary text-sm leading-relaxed mb-6">
+                <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
                   {project.logline}
                 </p>
                 
-                <div className="flex gap-3">
-                  <Button variant="paper" size="sm" className="flex-1">
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button variant="paper" size="sm" className="flex-1 text-sm">
                     <Eye className="w-4 h-4 mr-2" />
                     View Excerpt
                   </Button>
-                  <Button variant="ghost" size="sm">
+                  <Button variant="ghost" size="sm" className="text-sm">
                     <FileText className="w-4 h-4 mr-2" />
                     Treatment
                   </Button>
