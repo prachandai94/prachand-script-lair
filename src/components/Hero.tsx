@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/samurai-hero.png";
 
 export const Hero = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -42,11 +42,8 @@ export const Hero = () => {
       {/* Cursor Follow Effect */}
       <div ref={cursorRef} className="cursor-glow hidden md:block" />
       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
-      
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+      {/* Subtle Overlay for text readability */}
+      <div className="absolute inset-0 bg-background/10" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
