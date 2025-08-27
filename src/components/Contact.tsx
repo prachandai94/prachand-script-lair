@@ -61,7 +61,7 @@ export const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Pitch Your <span className="text-samurai-red brush-stroke">Project</span>
+            Get <span className="text-samurai-red brush-stroke">Connected</span>
           </h2>
           <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">

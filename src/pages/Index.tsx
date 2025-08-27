@@ -1,13 +1,11 @@
 import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { TrustStrip } from "@/components/TrustStrip";
 import { About } from "@/components/About";
 import { Writers } from "@/components/Writers";
 import { Services } from "@/components/Services";
 import { Work } from "@/components/Work";
 import { Process } from "@/components/Process";
-import { Testimonials } from "@/components/Testimonials";
 import { Contact } from "@/components/Contact";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
 import { Footer } from "@/components/Footer";
@@ -29,15 +27,14 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <TrustStrip />
         <div className="reveal stagger-1">
           <About />
         </div>
         <div className="reveal stagger-2">
-          <Writers />
+          <Services />
         </div>
         <div className="reveal stagger-3">
-          <Services />
+          <Writers />
         </div>
         <div className="reveal stagger-4">
           <Work />
@@ -46,9 +43,6 @@ const Index = () => {
           <Process />
         </div>
         <div className="reveal stagger-2">
-          <Testimonials />
-        </div>
-        <div className="reveal stagger-3">
           <Contact />
         </div>
       </main>

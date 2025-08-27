@@ -31,12 +31,12 @@ export const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed md:bg-fixed"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed"
+        backgroundPosition: "center top",
+        backgroundRepeat: "no-repeat"
       }}
     >
       {/* Cursor Follow Effect */}

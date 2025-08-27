@@ -1,7 +1,21 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, FileText } from "lucide-react";
+import { WorkModal } from "@/components/WorkModal";
 
 export const Work = () => {
+  const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project: typeof projects[0]) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
   const projects = [
     {
       title: "Midnight Protocol",
@@ -52,59 +66,66 @@ export const Work = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Featured <span className="text-neon-red">Work</span>
+            Featured <span className="text-samurai-red brush-stroke">Work</span>
           </h2>
-          <div className="neon-divider mb-8 max-w-xs mx-auto" />
+          <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             A showcase of compelling narratives across film, television, 
             digital platforms, and brand storytelling.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
-            <div 
+            <article 
               key={project.title}
-              className="glass-hover rounded-2xl overflow-hidden group"
+              className="paper-hover rounded-2xl overflow-hidden group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => openModal(project)}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 sm:h-56 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-neon-red/90 text-white text-xs font-medium rounded-full">
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className="px-3 py-1 bg-samurai-red text-white text-xs font-medium rounded-full">
                     {project.format}
                   </span>
                 </div>
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <Eye className="w-4 h-4 text-white" />
+                  </div>
+                </div>
               </div>
               
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-text-primary mb-3">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold text-text-primary mb-2 sm:mb-3 group-hover:text-samurai-red transition-colors line-clamp-2">
                   {project.title}
                 </h3>
                 
-                <p className="text-text-secondary text-sm sm:text-base leading-relaxed mb-4 sm:mb-6">
+                <p className="text-text-secondary text-sm sm:text-base leading-relaxed line-clamp-3">
                   {project.logline}
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button variant="paper" size="sm" className="flex-1 text-sm">
-                    <Eye className="w-4 h-4 mr-2" />
-                    View Excerpt
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-sm">
-                    <FileText className="w-4 h-4 mr-2" />
-                    Treatment
-                  </Button>
+                <div className="mt-4 pt-4 border-t border-samurai-red/10">
+                  <span className="text-xs text-samurai-red font-medium">
+                    Click to read full case study →
+                  </span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
+        
+        <WorkModal 
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          project={selectedProject}
+        />
       </div>
     </section>
   );

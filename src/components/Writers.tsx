@@ -59,9 +59,9 @@ export const Writers = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Our <span className="text-neon-red">Roster</span>
+            Our <span className="text-samurai-red brush-stroke">Roster</span>
           </h2>
-          <div className="neon-divider mb-8 max-w-xs mx-auto" />
+          <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-12">
             Meet the creative minds behind every script. Each writer brings unique expertise 
             and collaborative spirit to craft compelling narratives.
@@ -75,8 +75,8 @@ export const Writers = () => {
                 onClick={() => setActiveFilter(filter)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   activeFilter === filter
-                    ? "bg-neon-red text-white shadow-glow-red"
-                    : "glass text-text-secondary hover:text-neon-red hover:border-neon-red"
+                    ? "bg-samurai-red text-white shadow-elegant"
+                    : "paper text-text-secondary hover:text-samurai-red hover:border-samurai-red"
                 }`}
               >
                 {filter === "all" ? "All Writers" : filter}
@@ -90,7 +90,7 @@ export const Writers = () => {
           {filteredWriters.map((writer, index) => (
             <div 
               key={writer.name}
-              className="glass-hover rounded-2xl p-6 text-center group"
+              className="paper-hover rounded-2xl p-6 text-center group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
@@ -105,7 +105,7 @@ export const Writers = () => {
                 {writer.name}
               </h3>
               
-              <p className="text-neon-red font-medium mb-3">
+              <p className="text-samurai-red font-medium mb-3">
                 {writer.role}
               </p>
               

@@ -54,38 +54,27 @@ export const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={service.title}
-                className="glass-hover rounded-2xl p-8 group"
+                className="paper-hover rounded-2xl p-6 sm:p-8 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-neon-red/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-neon-red/20 transition-colors">
-                    <IconComponent className="w-6 h-6 text-neon-red" />
+                <div className="flex items-start mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-samurai-red/10 rounded-xl flex items-center justify-center mr-3 sm:mr-4 group-hover:bg-samurai-red/20 transition-colors flex-shrink-0">
+                    <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-samurai-red" />
                   </div>
-                  <h3 className="text-xl font-semibold text-text-primary">
-                    {service.title}
-                  </h3>
-                </div>
-                
-                <p className="text-text-secondary mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-neon-red mb-3">You get:</p>
-                  <ul className="space-y-2">
-                    {service.deliverables.map((item, idx) => (
-                      <li key={idx} className="text-sm text-text-muted flex items-center">
-                        <div className="w-1.5 h-1.5 bg-neon-red rounded-full mr-3 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-xl font-semibold text-text-primary mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-text-secondary leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             );

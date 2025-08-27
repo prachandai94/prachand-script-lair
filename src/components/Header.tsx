@@ -13,7 +13,7 @@ export const Header = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ["hero", "about", "writers", "services", "work", "process", "testimonials", "contact"];
+      const sections = ["hero", "about", "services", "writers", "work", "process", "contact"];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -40,11 +40,10 @@ export const Header = () => {
 
   const navItems = [
     { id: "about", label: "About" },
-    { id: "writers", label: "Writers" },
     { id: "services", label: "Services" },
+    { id: "writers", label: "Roster" },
     { id: "work", label: "Work" },
     { id: "process", label: "Process" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -64,8 +63,8 @@ export const Header = () => {
             <img src={logo} alt="Prachand Scripts" className="h-6 sm:h-8 w-auto" />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          {/* Desktop Navigation - Clean visible nav */}
+          <nav className="flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -82,61 +81,15 @@ export const Header = () => {
                 )}
               </button>
             ))}
-          </nav>
-
-          {/* Desktop CTA Button */}
-          <div className="hidden lg:block">
             <Button 
               variant="samurai" 
               size="default"
               onClick={() => scrollToSection("contact")}
-              className="px-4 xl:px-6"
+              className="ml-4 px-4 xl:px-6"
             >
-              Pitch a Project
+              Get Connected
             </Button>
-          </div>
-
-          {/* Mobile Menu Toggle */}
-          <button
-            className="lg:hidden p-2 text-text-secondary hover:text-samurai-red transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Navigation Menu */}
-        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
-          isMobileMenuOpen 
-            ? "max-h-96 opacity-100 mt-4" 
-            : "max-h-0 opacity-0 overflow-hidden"
-        }`}>
-          <div className="paper rounded-xl p-4 space-y-4">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`block w-full text-left py-3 px-4 rounded-lg text-base font-medium transition-colors ${
-                  activeSection === item.id 
-                    ? "text-samurai-red bg-samurai-red/10" 
-                    : "text-text-secondary hover:text-samurai-red hover:bg-samurai-red/5"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-            <div className="pt-2 border-t border-paper-border">
-              <Button 
-                variant="samurai" 
-                size="default"
-                onClick={() => scrollToSection("contact")}
-                className="w-full"
-              >
-                Pitch a Project
-              </Button>
-            </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
