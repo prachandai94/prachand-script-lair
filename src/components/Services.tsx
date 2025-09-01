@@ -23,7 +23,7 @@ export const Services = () => {
     {
       icon: Megaphone,
       title: "Ad Copy & Brand Storytelling",
-      description: "Narratives that drive brand engagement, and conversions, we believe words can become cash.",
+      description: "Narratives that drive brand engagement, and conversions, We believe words too can become cash.",
       deliverables: ["Brand narratives", "Campaign concepts", "Commercial scripts", "Content strategy"]
     },
     {
