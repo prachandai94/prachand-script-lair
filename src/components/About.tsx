@@ -1,6 +1,6 @@
 export const About = () => {
   const stats = [{
-    number: "11+",
+    number: "6+",
     label: "Writers",
     description: "Diverse creative voices"
   }, {
