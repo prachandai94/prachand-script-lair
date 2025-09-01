@@ -17,7 +17,7 @@ export const Services = () => {
     {
       icon: Monitor,
       title: "Micro Drama Experts", 
-      description: "Prachand Scripts are pioneers of Micro Drama content and vertical series in India. Cliff hangers so sharp, you'd surely fall for it.",
+      description: "Prachand Scripts are pioneers of Micro Drama content and vertical series in India. Cliff hangers so good, you're bound to fall for them!",
       deliverables: ["Concept development", "Short scripts", "Social media content", "Web series episodes"]
     },
     {
