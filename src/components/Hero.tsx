@@ -40,7 +40,7 @@ export const Hero = () => {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
           <Button variant="samurai" size="lg" onClick={scrollToContact} className="group w-full sm:w-auto px-8 py-4 text-base sm:text-lg">
-            Pitch a Project
+            Send us a Brief
             <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Button>
           
