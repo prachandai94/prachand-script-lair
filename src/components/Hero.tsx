@@ -26,11 +26,7 @@ export const Hero = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
         {/* Logo */}
         <div className="mb-8 sm:mb-12">
-          <img 
-            src="/lovable-uploads/536865e8-176d-4d94-8c25-2a112458ec03.png" 
-            alt="Scripts Logo" 
-            className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto mb-6 drop-shadow-2xl"
-          />
+          <img src="/lovable-uploads/536865e8-176d-4d94-8c25-2a112458ec03.png" alt="Scripts Logo" className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto mb-6 drop-shadow-2xl" />
         </div>
         
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 tracking-tight leading-none text-center">
@@ -39,9 +35,7 @@ export const Hero = () => {
           <span className="text-text-primary">.</span>
         </h1>
         
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
-          Disciplined storytelling forged by Prachand Entertainment's warrior scribes. We craft narratives with precision, honor, and cinematic vision—turning concepts into compelling stories across all mediums.
-        </p>
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">"This is Sparta! No... This is Writing."</p>
         
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
