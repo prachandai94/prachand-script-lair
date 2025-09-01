@@ -24,7 +24,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
-      <Header />
       <main>
         <Hero />
         <div className="reveal stagger-1">

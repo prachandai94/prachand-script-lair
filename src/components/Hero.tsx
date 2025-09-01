@@ -11,7 +11,8 @@ export const Hero = () => {
       });
     }
   };
-  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center bg-fixed md:bg-fixed" style={{
+  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+    backgroundColor: "#f5f1e8",
     backgroundImage: `url(${heroBg})`,
     backgroundSize: "70%",
     backgroundPosition: "center top",
