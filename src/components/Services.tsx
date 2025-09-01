@@ -11,7 +11,7 @@ export const Services = () => {
     {
       icon: Tv,
       title: "Webseries & Episode Writing",
-      description: "Series development and episodic content for streaming and broadcast",
+      description: "Episodics will always be first love!",
       deliverables: ["Series bible", "Pilot script", "Episode breakdowns", "Character arcs"]
     },
     {
