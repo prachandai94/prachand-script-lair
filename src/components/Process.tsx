@@ -1,41 +1,32 @@
 import { Lightbulb, FileText, Edit, Sparkles, CheckCircle } from "lucide-react";
-
 export const Process = () => {
-  const steps = [
-    {
-      icon: Lightbulb,
-      title: "Discovery",
-      description: "Deep dive into your vision, audience, and creative goals",
-      details: "1-2 weeks • Initial briefing • Creative alignment"
-    },
-    {
-      icon: FileText,
-      title: "Concept",
-      description: "Collaborative ideation and story architecture development",
-      details: "2-3 weeks • Concept refinement • Story structure"
-    },
-    {
-      icon: Edit,
-      title: "Outline",
-      description: "Detailed scene-by-scene breakdown and character development",
-      details: "1-2 weeks • Beat sheets • Character arcs"
-    },
-    {
-      icon: Sparkles,
-      title: "Drafts",
-      description: "Collaborative writing with table reads and rapid iteration",
-      details: "4-6 weeks • First draft • Table reads • Feedback integration"
-    },
-    {
-      icon: CheckCircle,
-      title: "Polish",
-      description: "Final refinements and production-ready formatting",
-      details: "1-2 weeks • Final draft • Production notes • Delivery"
-    }
-  ];
-
-  return (
-    <section id="process" className="py-24 bg-background-secondary/30">
+  const steps = [{
+    icon: Lightbulb,
+    title: "Discovery",
+    description: "Deep dive into your vision, audience, and creative goals",
+    details: "1-2 weeks • Initial briefing • Creative alignment"
+  }, {
+    icon: FileText,
+    title: "Concept",
+    description: "Collaborative ideation and story architecture development",
+    details: "2-3 weeks • Concept refinement • Story structure"
+  }, {
+    icon: Edit,
+    title: "Outline",
+    description: "Detailed scene-by-scene breakdown and character development",
+    details: "1-2 weeks • Beat sheets • Character arcs"
+  }, {
+    icon: Sparkles,
+    title: "Drafts",
+    description: "Collaborative writing with table reads and rapid iteration",
+    details: "4-6 weeks • First draft • Table reads • Feedback integration"
+  }, {
+    icon: CheckCircle,
+    title: "Polish",
+    description: "Final refinements and production-ready formatting",
+    details: "1-2 weeks • Final draft • Production notes • Delivery"
+  }];
+  return <section id="process" className="py-24 bg-background-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
@@ -65,25 +56,16 @@ export const Process = () => {
           
           <div className="space-y-16">
             {steps.map((step, index) => {
-              const IconComponent = step.icon;
-              const isEven = index % 2 === 0;
-              
-              return (
-                <div 
-                  key={step.title}
-                  className={`relative flex items-center ${
-                    isEven ? "md:flex-row" : "md:flex-row-reverse"
-                  } flex-col md:text-left text-center`}
-                >
+            const IconComponent = step.icon;
+            const isEven = index % 2 === 0;
+            return <div key={step.title} className={`relative flex items-center ${isEven ? "md:flex-row" : "md:flex-row-reverse"} flex-col md:text-left text-center`}>
                   {/* Timeline Dot */}
                   <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-samurai-red rounded-full transform md:-translate-x-1/2 shadow-red-strong z-10" />
                   
                   {/* Connecting Arrow */}
-                  {index < steps.length - 1 && (
-                    <div className={`absolute ${isEven ? 'left-12 md:left-1/2 md:ml-2' : 'left-12 md:left-1/2 md:mr-2'} top-8 w-8 h-0.5 bg-samurai-red/60 transform ${isEven ? 'md:translate-x-2' : 'md:-translate-x-10'}`}>
+                  {index < steps.length - 1 && <div className={`absolute ${isEven ? 'left-12 md:left-1/2 md:ml-2' : 'left-12 md:left-1/2 md:mr-2'} top-8 w-8 h-0.5 bg-samurai-red/60 transform ${isEven ? 'md:translate-x-2' : 'md:-translate-x-10'}`}>
                       <div className={`absolute ${isEven ? 'right-0' : 'left-0'} top-0 w-2 h-2 border-t border-r border-samurai-red/60 transform ${isEven ? 'rotate-45 -translate-y-1' : '-rotate-135 translate-y-1'}`} />
-                    </div>
-                  )}
+                    </div>}
                   
                   {/* Content */}
                   <div className={`w-full md:w-5/12 ${isEven ? "md:pr-16 pl-20 md:pl-0" : "md:pl-16 pl-20 md:pr-0"}`}>
@@ -105,17 +87,14 @@ export const Process = () => {
                         {step.description}
                       </p>
                       
-                      <p className="text-sm text-text-muted">
-                        {step.details}
-                      </p>
+                      
                     </div>
                   </div>
                   
                   {/* Spacer for other side */}
                   <div className="hidden md:block w-5/12" />
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
         
@@ -130,6 +109,5 @@ export const Process = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
