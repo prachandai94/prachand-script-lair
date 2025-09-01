@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import heroBg from "@/assets/samurai-hero.png";
+import heroBg from "/lovable-uploads/22f094c2-c6df-4e2f-9278-e24bd89c19de.png";
 export const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
