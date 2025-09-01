@@ -77,7 +77,7 @@ export const Blogs = () => {
   };
 
   return (
-    <section id="blogs" className="py-12 sm:py-16">
+    <section id="blogs" className="py-8 sm:py-12 lg:py-16">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
@@ -86,7 +86,59 @@ export const Blogs = () => {
           <div className="samurai-divider mb-4 sm:mb-6 max-w-xs mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {/* Mobile 2x3 Grid Layout */}
+        <div className="grid grid-cols-2 md:hidden gap-3 max-w-sm mx-auto">
+          {blogPosts.map((post, index) => (
+            <article 
+              key={post.id}
+              className="relative bg-gradient-to-br from-paper via-paper to-paper/95 border border-samurai-red/20 rounded-lg overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-red-strong hover:border-samurai-red/40 hover:-translate-y-1 touch-manipulation focus-visible:ring-2 focus-visible:ring-samurai-red focus-visible:ring-offset-2 aspect-square"
+              style={{ animationDelay: `${index * 0.1}s` }}
+              onClick={() => openPost(post)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openPost(post);
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`Read article: ${post.title}`}
+            >
+              {/* Red accent line */}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-samurai-red via-samurai-red-light to-samurai-red"></div>
+              
+              <div className="relative h-20 overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover transition-all duration-500 hover-only:group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-samurai-red/80 via-samurai-red/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+              </div>
+              
+              <div className="p-2 flex flex-col justify-between h-[calc(100%-5rem)]">
+                <div>
+                  <h3 className="text-xs font-bold text-text-primary group-hover:text-samurai-red transition-colors line-clamp-2 leading-tight mb-1">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-text-secondary text-xs leading-tight line-clamp-2 mb-2">
+                    {post.excerpt}
+                  </p>
+                </div>
+                
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-samurai-red font-bold text-xs">READ</span>
+                  <span className="text-text-muted">{post.readTime}</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {blogPosts.map((post, index) => (
             <article 
               key={post.id}

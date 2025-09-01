@@ -14,7 +14,7 @@ export const Hero = () => {
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
     backgroundColor: "hsl(0, 75%, 45%)",
     backgroundImage: `url(${heroBg})`,
-    backgroundSize: "contain",
+    backgroundSize: window.innerWidth <= 768 ? "cover" : "contain",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat"
   }}>
@@ -38,15 +38,15 @@ export const Hero = () => {
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">"This is Sparta! No... This is Writing."</p>
         
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4">
-          <Button variant="samurai" size="lg" onClick={scrollToContact} className="group w-full sm:w-auto px-8 py-4 text-base sm:text-lg">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center px-4">
+          <Button variant="samurai" onClick={scrollToContact} className="group w-full sm:w-auto px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base md:text-lg">
             Send us a Brief
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
           </Button>
           
-          <Button variant="outline" size="lg" onClick={() => window.open("https://www.prachandentertainment.com/", "_blank")} className="group w-full sm:w-auto px-8 py-4 text-base sm:text-lg">
+          <Button variant="outline" onClick={() => window.open("https://www.prachandentertainment.com/", "_blank")} className="group w-full sm:w-auto px-4 py-2 sm:px-8 sm:py-4 text-sm sm:text-base md:text-lg">
             Visit Mother Website
-            <ExternalLink className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
+            <ExternalLink className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:scale-110" />
           </Button>
         </div>
       </div>

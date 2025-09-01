@@ -31,12 +31,12 @@ const Index = () => {
         </div>
         
         {/* Samurai Divider */}
-        <div className="pt-0 pb-1 sm:pt-0 sm:pb-1 bg-background">
+        <div className="pt-0 pb-0 sm:pt-0 sm:pb-1 bg-background">
           <div className="container mx-auto px-4 flex justify-center">
             <img 
               src="/lovable-uploads/193a570d-71c6-437f-be7a-7ea0740f8df0.png" 
               alt="Samurai silhouette" 
-              className="h-36 sm:h-48 md:h-60 w-auto filter brightness-0 drop-shadow-lg"
+              className="h-20 sm:h-36 md:h-48 lg:h-60 w-auto filter brightness-0 drop-shadow-lg"
             />
           </div>
         </div>
