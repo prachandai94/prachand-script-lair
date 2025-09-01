@@ -90,9 +90,18 @@ export const Blogs = () => {
           {blogPosts.map((post, index) => (
             <article 
               key={post.id}
-              className="relative bg-gradient-to-br from-paper via-paper to-paper/95 border border-samurai-red/20 rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-red-strong hover:border-samurai-red/40 hover:-translate-y-2"
+              className="relative bg-gradient-to-br from-paper via-paper to-paper/95 border border-samurai-red/20 rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-red-strong hover:border-samurai-red/40 hover:-translate-y-2 touch-manipulation focus-visible:ring-2 focus-visible:ring-samurai-red focus-visible:ring-offset-2"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openPost(post)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openPost(post);
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              aria-label={`Read article: ${post.title}`}
             >
               {/* Red accent line */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-samurai-red via-samurai-red-light to-samurai-red"></div>
@@ -101,7 +110,8 @@ export const Blogs = () => {
                 <img 
                   src={post.image} 
                   alt={post.title}
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-500 hover-only:group-hover:scale-110"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-samurai-red/80 via-samurai-red/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
                 <div className="absolute top-4 right-4">
@@ -141,7 +151,7 @@ export const Blogs = () => {
                   </span>
                   <div className="flex items-center gap-1">
                     <div className="w-6 h-px bg-gradient-to-r from-samurai-red to-samurai-red-light"></div>
-                    <ArrowRight className="w-4 h-4 text-samurai-red transition-transform group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 text-samurai-red transition-transform hover-only:group-hover:translate-x-1" />
                   </div>
                 </div>
               </div>
@@ -157,66 +167,67 @@ export const Blogs = () => {
 
       {/* Blog Post Modal */}
       {selectedPost && (
-        <div 
-          className="fixed inset-0 bg-background/90 backdrop-blur-md z-50 flex items-center justify-center p-4"
-          onClick={closePost}
-        >
-          <div 
-            className="bg-paper border-2 border-samurai-red/30 rounded-2xl max-w-3xl w-full max-h-[85vh] overflow-y-auto shadow-red-strong relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Red accent border */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-samurai-red via-samurai-red-light to-samurai-red"></div>
-            
-            <div className="relative h-64 overflow-hidden rounded-t-2xl">
-              <img 
-                src={selectedPost.image} 
-                alt={selectedPost.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-samurai-red/60 via-samurai-red/20 to-transparent"></div>
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm">
+          {/* Mobile-optimized modal */}
+          <div className="h-full md:h-auto md:max-h-[90vh] md:my-4 md:mx-4 md:rounded-xl bg-paper border-0 md:border md:border-samurai-red/30 shadow-red-strong flex flex-col md:max-w-4xl md:mx-auto overflow-hidden">
+            {/* Fixed Header with Close Button */}
+            <div className="sticky top-0 z-20 bg-paper/95 backdrop-blur-sm border-b border-samurai-red/20 p-4 md:p-6 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-samurai-red rounded-full"></div>
+                <span className="text-samurai-red text-sm font-medium">ARTICLE</span>
+              </div>
               <button
                 onClick={closePost}
-                className="absolute top-4 right-4 w-10 h-10 bg-samurai-red text-white backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-samurai-red-dark transition-all shadow-red font-bold text-lg"
+                className="flex-shrink-0 w-10 h-10 md:w-8 md:h-8 bg-samurai-red/10 hover:bg-samurai-red/20 active:bg-samurai-red/30 border border-samurai-red/30 text-samurai-red rounded-full flex items-center justify-center transition-all duration-200 touch-manipulation focus-visible:ring-2 focus-visible:ring-samurai-red focus-visible:ring-offset-2"
+                aria-label="Close article"
               >
-                ×
+                <span className="text-lg md:text-base font-bold">✕</span>
               </button>
             </div>
             
-            <div className="p-6 sm:p-8">
-              <div className="flex items-center gap-4 mb-6 text-sm">
-                <div className="flex items-center gap-2 px-3 py-1 bg-samurai-red/10 rounded-full">
-                  <User className="w-4 h-4 text-samurai-red" />
-                  <span className="font-semibold text-samurai-red">{selectedPost.author}</span>
+            {/* Scrollable Content */}
+            <div className="flex-1 overflow-y-auto">
+              <div className="p-4 md:p-6 lg:p-8">
+                <img 
+                  src={selectedPost.image} 
+                  alt={selectedPost.title}
+                  className="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover rounded-lg mb-4 md:mb-6 border-2 border-samurai-red/20"
+                  loading="lazy"
+                />
+                
+                <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4 md:mb-6 text-xs md:text-sm text-text-muted">
+                  <div className="flex items-center gap-2">
+                    <User className="w-3 h-3 md:w-4 md:h-4 text-samurai-red flex-shrink-0" />
+                    <span className="font-medium">{selectedPost.author}</span>
+                  </div>
+                  <div className="w-1 h-1 bg-samurai-red/40 rounded-full flex-shrink-0"></div>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-3 h-3 md:w-4 md:h-4 text-samurai-red flex-shrink-0" />
+                    <span>{selectedPost.date}</span>
+                  </div>
+                  <div className="w-1 h-1 bg-samurai-red/40 rounded-full flex-shrink-0 hidden sm:block"></div>
+                  <span className="px-2 md:px-3 py-1 bg-samurai-red/10 text-samurai-red text-xs font-medium rounded-full">
+                    {selectedPost.readTime}
+                  </span>
                 </div>
-                <div className="flex items-center gap-1 text-text-muted">
-                  <Calendar className="w-4 h-4" />
-                  <span>{selectedPost.date}</span>
+                
+                <h1 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-text-primary leading-tight mobile-line-height-tight">
+                  {selectedPost.title}
+                </h1>
+                
+                {/* Red accent line */}
+                <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-samurai-red to-samurai-red-light mb-4 md:mb-6 rounded-full"></div>
+                
+                <div className="space-y-4 md:space-y-5 text-text-secondary">
+                  {selectedPost.content.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className="text-sm sm:text-base lg:text-lg leading-relaxed md:leading-loose mobile-text-balance">
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
-                <span className="px-3 py-1 bg-samurai-red text-white text-xs rounded-full font-medium">
-                  {selectedPost.readTime}
-                </span>
-              </div>
-              
-              <h1 className="text-2xl sm:text-3xl font-bold text-text-primary mb-2 leading-tight">
-                {selectedPost.title}
-              </h1>
-              
-              {/* Red accent line under title */}
-              <div className="w-16 h-1 bg-gradient-to-r from-samurai-red to-samurai-red-light mb-6 rounded-full"></div>
-              
-              <div className="text-text-secondary leading-relaxed mb-8 text-base">
-                {selectedPost.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="mb-4">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-              
-              <div className="border-t border-samurai-red/20 pt-6">
-                <Button onClick={closePost} variant="samurai" className="w-full sm:w-auto shadow-red">
-                  Close Article
-                </Button>
+                
+                {/* Mobile bottom spacing */}
+                <div className="h-8 md:h-4 mt-8 md:mt-6"></div>
               </div>
             </div>
           </div>
