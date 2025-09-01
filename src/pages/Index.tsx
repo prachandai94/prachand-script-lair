@@ -31,7 +31,7 @@ const Index = () => {
         </div>
         
         {/* Samurai Divider */}
-        <div className="py-3 sm:py-4 bg-background">
+        <div className="py-1 sm:py-1 bg-background">
           <div className="container mx-auto px-4 flex justify-center">
             <img 
               src="/lovable-uploads/193a570d-71c6-437f-be7a-7ea0740f8df0.png" 
