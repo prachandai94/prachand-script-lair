@@ -27,7 +27,7 @@ export const Hero = () => {
         {/* Logo */}
         <div className="mb-8 sm:mb-12">
           <img 
-            src="/lovable-uploads/82b47104-a93b-4811-bcb2-e74046f725af.png" 
+            src="/lovable-uploads/536865e8-176d-4d94-8c25-2a112458ec03.png" 
             alt="Scripts Logo" 
             className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto mx-auto mb-6 drop-shadow-2xl"
           />

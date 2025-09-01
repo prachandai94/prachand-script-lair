@@ -9,7 +9,7 @@ export const PreFooterCTA = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 max-w-6xl mx-auto">
           {/* Left: Brand Logo */}
           <div className="flex-shrink-0 order-1 md:order-1">
-            <img src="/lovable-uploads/82b47104-a93b-4811-bcb2-e74046f725af.png" alt="Scripts" className="h-8 sm:h-10 md:h-12 w-auto" />
+            <img src="/lovable-uploads/536865e8-176d-4d94-8c25-2a112458ec03.png" alt="Scripts" className="h-8 sm:h-10 md:h-12 w-auto" />
           </div>
 
           {/* Center: Samurai Divider */}
