@@ -3,20 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import heroBg from "@/assets/samurai-hero.png";
 export const Hero = () => {
-  const cursorRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (cursorRef.current && window.innerWidth > 768) {
-        cursorRef.current.style.left = e.clientX + "px";
-        cursorRef.current.style.top = e.clientY + "px";
-      }
-    };
-    const heroSection = document.getElementById("hero");
-    if (heroSection) {
-      heroSection.addEventListener("mousemove", handleMouseMove);
-      return () => heroSection.removeEventListener("mousemove", handleMouseMove);
-    }
-  }, []);
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -31,20 +17,16 @@ export const Hero = () => {
     backgroundPosition: "center top",
     backgroundRepeat: "no-repeat"
   }}>
-      {/* Cursor Follow Effect */}
-      <div ref={cursorRef} className="cursor-glow hidden md:block" />
       
       {/* Subtle Overlay for text readability */}
       <div className="absolute inset-0 bg-background/10" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
-        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 tracking-tight leading-none">
-          <span className="text-text-primary">The Pen Is The New Sword.</span>
-          <br />
-          
-          <br />
-          
+        <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 tracking-tight leading-none text-center">
+          <span className="text-text-primary">The Pen Is The New </span>
+          <span className="text-samurai-red">Sword</span>
+          <span className="text-text-primary">.</span>
         </h1>
         
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">

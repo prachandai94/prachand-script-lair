@@ -39,9 +39,9 @@ export const Process = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            From Spark to <span className="text-neon-red">Script</span>
+            From Spark to <span className="text-samurai-red">Script</span>
           </h2>
-          <div className="neon-divider mb-8 max-w-xs mx-auto" />
+          <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
             Our collaborative process ensures ideas travel from initial spark 
             to production-ready screenplay without losing their soul.
@@ -55,7 +55,13 @@ export const Process = () => {
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
           {/* Connection Line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-neon-red via-neon-red/50 to-neon-red transform md:-translate-x-1/2 glow-red" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-samurai-red via-samurai-red/50 to-samurai-red transform md:-translate-x-1/2 shadow-red" />
+          
+          {/* Connecting Lines */}
+          <div className="absolute left-8 md:left-1/2 top-16 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-30" />
+          <div className="absolute left-8 md:left-1/2 top-32 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-50" />
+          <div className="absolute left-8 md:left-1/2 top-48 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-70" />
+          <div className="absolute left-8 md:left-1/2 top-64 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-90" />
           
           <div className="space-y-16">
             {steps.map((step, index) => {
@@ -70,16 +76,23 @@ export const Process = () => {
                   } flex-col md:text-left text-center`}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-neon-red rounded-full transform md:-translate-x-1/2 glow-red-strong z-10" />
+                  <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-samurai-red rounded-full transform md:-translate-x-1/2 shadow-red-strong z-10" />
+                  
+                  {/* Connecting Arrow */}
+                  {index < steps.length - 1 && (
+                    <div className={`absolute ${isEven ? 'left-12 md:left-1/2 md:ml-2' : 'left-12 md:left-1/2 md:mr-2'} top-8 w-8 h-0.5 bg-samurai-red/60 transform ${isEven ? 'md:translate-x-2' : 'md:-translate-x-10'}`}>
+                      <div className={`absolute ${isEven ? 'right-0' : 'left-0'} top-0 w-2 h-2 border-t border-r border-samurai-red/60 transform ${isEven ? 'rotate-45 -translate-y-1' : '-rotate-135 translate-y-1'}`} />
+                    </div>
+                  )}
                   
                   {/* Content */}
                   <div className={`w-full md:w-5/12 ${isEven ? "md:pr-16 pl-20 md:pl-0" : "md:pl-16 pl-20 md:pr-0"}`}>
                     <div className="glass-hover rounded-2xl p-8 group">
                       <div className="flex items-center mb-4 justify-center md:justify-start">
-                        <div className="w-12 h-12 bg-neon-red/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-neon-red/20 transition-colors">
-                          <IconComponent className="w-6 h-6 text-neon-red" />
+                        <div className="w-12 h-12 bg-samurai-red/10 rounded-xl flex items-center justify-center mr-4 group-hover:bg-samurai-red/20 transition-colors">
+                          <IconComponent className="w-6 h-6 text-samurai-red" />
                         </div>
-                        <div className="text-2xl font-display font-bold text-neon-red">
+                        <div className="text-2xl font-display font-bold text-samurai-red">
                           {String(index + 1).padStart(2, '0')}
                         </div>
                       </div>

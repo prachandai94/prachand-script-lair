@@ -4,7 +4,7 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Writers } from "@/components/Writers";
 import { Services } from "@/components/Services";
-import { Work } from "@/components/Work";
+import { Blogs } from "@/components/Blogs";
 import { Process } from "@/components/Process";
 import { Contact } from "@/components/Contact";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
@@ -37,7 +37,7 @@ const Index = () => {
           <Writers />
         </div>
         <div className="reveal stagger-4">
-          <Work />
+          <Blogs />
         </div>
         <div className="reveal stagger-1">
           <Process />

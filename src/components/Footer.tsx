@@ -30,7 +30,7 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-glass-border">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <img src={logo} alt="Prachand Scripts" className="h-8 w-auto" />
@@ -45,7 +45,7 @@ export const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
-                    className="text-text-muted hover:text-neon-red transition-colors"
+                    className="text-text-muted hover:text-samurai-red transition-colors"
                     aria-label={social.label}
                   >
                     <IconComponent className="w-5 h-5" />
@@ -55,21 +55,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-text-primary font-semibold">Quick Links</h3>
-            <nav className="flex flex-col space-y-2">
-              {navLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-text-secondary hover:text-neon-red transition-colors text-sm text-left"
-                >
-                  {link.label}
-                </button>
-              ))}
-            </nav>
-          </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
@@ -77,7 +62,7 @@ export const Footer = () => {
             <div className="space-y-2 text-sm">
               <a 
                 href="mailto:scripts@prachandentertainment.com"
-                className="text-text-secondary hover:text-neon-red transition-colors block"
+                className="text-text-secondary hover:text-samurai-red transition-colors block"
               >
                 scripts@prachandentertainment.com
               </a>
@@ -99,7 +84,7 @@ export const Footer = () => {
               href="https://www.prachandentertainment.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-neon-red hover:underline"
+              className="text-samurai-red hover:underline"
             >
               Prachand Entertainment
             </a>
