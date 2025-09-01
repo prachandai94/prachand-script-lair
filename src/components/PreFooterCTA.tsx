@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import logo from "@/assets/logo.png";
+
 
 export const PreFooterCTA = () => {
   return (
@@ -9,7 +9,7 @@ export const PreFooterCTA = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 max-w-6xl mx-auto">
           {/* Left: Brand Logo */}
           <div className="flex-shrink-0 order-1 md:order-1">
-            <img src={logo} alt="Prachand Scripts" className="h-8 sm:h-10 md:h-12 w-auto" />
+            <img src="/lovable-uploads/82b47104-a93b-4811-bcb2-e74046f725af.png" alt="Scripts" className="h-8 sm:h-10 md:h-12 w-auto" />
           </div>
 
           {/* Center: Samurai Divider */}

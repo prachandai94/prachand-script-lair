@@ -1,5 +1,5 @@
 import { Mail, Instagram, Twitter, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png";
+
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,7 +33,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           {/* Brand Section */}
           <div className="space-y-4">
-            <img src={logo} alt="Prachand Scripts" className="h-8 w-auto" />
+            <img src="/lovable-uploads/82b47104-a93b-4811-bcb2-e74046f725af.png" alt="Scripts" className="h-8 w-auto" />
             <p className="text-text-secondary text-sm leading-relaxed max-w-xs">
               The in-house writing team of Prachand Entertainment. 
               Crafting compelling narratives across all formats.

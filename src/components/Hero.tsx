@@ -24,6 +24,15 @@ export const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
+        {/* Logo */}
+        <div className="mb-8 sm:mb-12">
+          <img 
+            src="/lovable-uploads/82b47104-a93b-4811-bcb2-e74046f725af.png" 
+            alt="Scripts Logo" 
+            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto mx-auto mb-6 drop-shadow-2xl"
+          />
+        </div>
+        
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 tracking-tight leading-none text-center">
           <span className="text-text-primary">The Pen Is The New </span>
           <span className="text-samurai-red">Sword</span>
