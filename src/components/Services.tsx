@@ -10,32 +10,32 @@ export const Services = () => {
     },
     {
       icon: Tv,
-      title: "TV Bible & Episode Writing",
+      title: "Webseries & Episode Writing",
       description: "Series development and episodic content for streaming and broadcast",
       deliverables: ["Series bible", "Pilot script", "Episode breakdowns", "Character arcs"]
     },
     {
       icon: Monitor,
-      title: "Digital/Shorts Scripting", 
-      description: "Short-form content for digital platforms and social media",
+      title: "Micro Drama Experts", 
+      description: "Prachand Scripts are pioneers of Micro Drama content and vertical series in India. Cliff hangers so sharp, you'd surely fall for it.",
       deliverables: ["Concept development", "Short scripts", "Social media content", "Web series episodes"]
     },
     {
       icon: Megaphone,
       title: "Ad Copy & Brand Storytelling",
-      description: "Compelling narratives that drive brand engagement and conversions",
+      description: "Narratives that drive brand engagement, and conversions, we believe words can become cash.",
       deliverables: ["Brand narratives", "Campaign concepts", "Commercial scripts", "Content strategy"]
     },
     {
       icon: FileEdit,
-      title: "Script Doctoring & Punch-ups",
-      description: "Professional script analysis and improvement services",
+      title: "Punch-ups",
+      description: "Script doctoring and analysis services at scale.",
       deliverables: ["Script analysis", "Structural notes", "Dialogue polish", "Character development"]
     },
     {
       icon: Presentation,
       title: "Pitch Decks & Treatments",
-      description: "Professional presentation materials for project development",
+      description: "good words are best shown beautifully, in the deck before the lens.",
       deliverables: ["Visual pitch decks", "Story treatments", "Mood boards", "Investor packages"]
     }
   ];
