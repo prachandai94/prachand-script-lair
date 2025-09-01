@@ -108,9 +108,7 @@ export const Process = () => {
         <div className="mt-16 text-center">
           <div className="glass rounded-2xl p-8 max-w-2xl mx-auto">
             <p className="text-text-secondary italic">
-              "Every project is unique, but our collaborative approach remains constant: 
-              transparent communication, creative flexibility, and relentless focus on 
-              bringing your story to life with maximum impact."
+              "Every project is unique, and client's demands varies. Our focus is always to bring you the fastest, and the best script with maximum impact."
             </p>
           </div>
         </div>
