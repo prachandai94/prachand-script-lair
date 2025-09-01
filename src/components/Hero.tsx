@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import heroBg from "/lovable-uploads/e18b8eb6-0423-4281-99f7-8dab0eaf755b.png";
+import heroBg from "/lovable-uploads/c6da8614-ad6e-44e8-9d6a-04bcac1466ca.png";
 export const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById("contact");
@@ -14,13 +14,13 @@ export const Hero = () => {
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
     backgroundColor: "#f5f1e8",
     backgroundImage: `url(${heroBg})`,
-    backgroundSize: "70%",
-    backgroundPosition: "center top",
+    backgroundSize: "contain",
+    backgroundPosition: "center center",
     backgroundRepeat: "no-repeat"
   }}>
       
       {/* Subtle Overlay for text readability */}
-      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-transparent" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
