@@ -12,7 +12,7 @@ export const Hero = () => {
     }
   };
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundColor: "#f5f1e8",
+    backgroundColor: "hsl(0, 75%, 45%)",
     backgroundImage: `url(${heroBg})`,
     backgroundSize: "contain",
     backgroundPosition: "center center",
@@ -50,7 +50,9 @@ export const Hero = () => {
       
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          
+          <div className="w-6 h-10 border-2 border-samurai-red rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-samurai-red rounded-full mt-2 animate-pulse" />
+          </div>
         </div>
     </section>;
 };
