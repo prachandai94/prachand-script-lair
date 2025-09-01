@@ -24,7 +24,7 @@ export const Writers = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Our <span className="text-samurai-red brush-stroke">The Core Team</span>
+            <span className="text-samurai-red brush-stroke">The Core Team</span>
           </h2>
           <div className="samurai-divider mb-8 max-w-xs mx-auto" />
         </div>

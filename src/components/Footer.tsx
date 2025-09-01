@@ -21,7 +21,7 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Mail, href: "mailto:scripts@prachandentertainment.com", label: "Email" },
+    { icon: Mail, href: "mailto:alii@prachandentertainment.com", label: "Email" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Linkedin, href: "#", label: "LinkedIn" }
@@ -61,14 +61,11 @@ export const Footer = () => {
             <h3 className="text-text-primary font-semibold">Get In Touch</h3>
             <div className="space-y-2 text-sm">
               <a 
-                href="mailto:scripts@prachandentertainment.com"
+                href="mailto:alii@prachandentertainment.com"
                 className="text-text-secondary hover:text-samurai-red transition-colors block"
               >
-                scripts@prachandentertainment.com
+                alii@prachandentertainment.com
               </a>
-              <p className="text-text-muted">
-                Ready to collaborate? Pitch your project and let's create something extraordinary.
-              </p>
             </div>
           </div>
         </div>
