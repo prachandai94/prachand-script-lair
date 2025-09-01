@@ -45,6 +45,26 @@ export const Blogs = () => {
       date: "November 28, 2024",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
       readTime: "4 min read"
+    },
+    {
+      id: 5,
+      title: "Interactive Storytelling in the Digital Age",
+      excerpt: "Exploring how technology enables new forms of narrative engagement and audience participation.",
+      content: "Interactive storytelling represents the future of narrative engagement, where audiences become active participants in shaping the story...",
+      author: "Jordan Taylor", 
+      date: "November 20, 2024",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
+      readTime: "6 min read"
+    },
+    {
+      id: 6,
+      title: "The Psychology of Compelling Dialogue",
+      excerpt: "Understanding how great dialogue reveals character, advances plot, and creates emotional resonance.",
+      content: "Great dialogue is more than just words on a page; it's the heartbeat of character development and the engine of compelling storytelling...",
+      author: "Rachel Wong",
+      date: "November 15, 2024", 
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
+      readTime: "5 min read"
     }
   ];
 
@@ -57,28 +77,24 @@ export const Blogs = () => {
   };
 
   return (
-    <section id="blogs" className="py-16 sm:py-20 lg:py-24">
+    <section id="blogs" className="py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-text-primary">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary">
             Insights & <span className="text-samurai-red brush-stroke">Stories</span>
           </h2>
-          <div className="samurai-divider mb-6 sm:mb-8 max-w-xs mx-auto" />
-          <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
-            Behind-the-scenes insights, industry perspectives, and storytelling wisdom 
-            from our team of narrative craftsmen.
-          </p>
+          <div className="samurai-divider mb-4 sm:mb-6 max-w-xs mx-auto" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {blogPosts.map((post, index) => (
             <article 
               key={post.id}
-              className="paper-hover rounded-2xl overflow-hidden group cursor-pointer"
+              className="paper-hover rounded-xl overflow-hidden group cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openPost(post)}
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              <div className="relative h-32 sm:h-40 overflow-hidden">
                 <img 
                   src={post.image} 
                   alt={post.title}
@@ -92,8 +108,8 @@ export const Blogs = () => {
                 </div>
               </div>
               
-              <div className="p-4 sm:p-6">
-                <div className="flex items-center gap-4 mb-3 text-xs text-text-muted">
+              <div className="p-3 sm:p-4">
+                <div className="flex items-center gap-3 mb-2 text-xs text-text-muted">
                   <div className="flex items-center gap-1">
                     <User className="w-3 h-3" />
                     <span>{post.author}</span>
@@ -104,19 +120,19 @@ export const Blogs = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-lg sm:text-xl font-semibold text-text-primary mb-2 sm:mb-3 group-hover:text-samurai-red transition-colors line-clamp-2">
+                <h3 className="text-sm sm:text-base font-semibold text-text-primary mb-2 group-hover:text-samurai-red transition-colors line-clamp-2">
                   {post.title}
                 </h3>
                 
-                <p className="text-text-secondary text-sm sm:text-base leading-relaxed line-clamp-3 mb-4">
+                <p className="text-text-secondary text-xs sm:text-sm leading-relaxed line-clamp-2 mb-3">
                   {post.excerpt}
                 </p>
                 
-                <div className="flex items-center justify-between pt-4 border-t border-samurai-red/10">
+                <div className="flex items-center justify-between pt-3 border-t border-samurai-red/10">
                   <span className="text-xs text-samurai-red font-medium">
-                    Read full article
+                    {post.readTime}
                   </span>
-                  <ArrowRight className="w-4 h-4 text-samurai-red transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-3 h-3 text-samurai-red transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </article>
