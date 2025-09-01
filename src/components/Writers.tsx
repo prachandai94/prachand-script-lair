@@ -3,17 +3,17 @@ import { useState } from "react";
 export const Writers = () => {
   const writers = [
     {
-      name: "Arjun Sharma",
+      name: "Alii Khan",
       role: "Lead Screenwriter",
       image: "/lovable-uploads/42ffc777-ea98-47ca-9c1b-70e2001b94d5.png"
     },
     {
-      name: "Rohit Verma", 
+      name: "Divith Shetty", 
       role: "Creative Director",
       image: "/lovable-uploads/9f5afc98-ee5a-4f1a-8399-3dc6e51d0cca.png"
     },
     {
-      name: "Vikram Singh",
+      name: "Sanchit Chadha",
       role: "Script Doctor", 
       image: "/lovable-uploads/02bc8c98-1380-49bd-867f-a15df619a244.png"
     }
@@ -48,10 +48,6 @@ export const Writers = () => {
               <h3 className="text-lg font-semibold text-text-primary mb-2">
                 {writer.name}
               </h3>
-              
-              <p className="text-sm text-samurai-red font-medium">
-                {writer.role}
-              </p>
             </div>
           ))}
         </div>
