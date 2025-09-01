@@ -36,7 +36,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/193a570d-71c6-437f-be7a-7ea0740f8df0.png" 
               alt="Samurai silhouette" 
-              className="h-24 sm:h-32 md:h-40 w-auto opacity-80 filter drop-shadow-lg"
+              className="h-36 sm:h-48 md:h-60 w-auto filter brightness-0 drop-shadow-lg"
             />
           </div>
         </div>
