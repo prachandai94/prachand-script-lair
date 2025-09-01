@@ -3,34 +3,19 @@ import { useState } from "react";
 export const Writers = () => {
   const writers = [
     {
-      name: "Sarah Chen",
+      name: "Arjun Sharma",
       role: "Lead Screenwriter",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b890?w=400&h=600&fit=crop&crop=face"
+      image: "/lovable-uploads/42ffc777-ea98-47ca-9c1b-70e2001b94d5.png"
     },
     {
-      name: "Marcus Rodriguez", 
-      role: "TV Show Runner",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=face"
+      name: "Rohit Verma", 
+      role: "Creative Director",
+      image: "/lovable-uploads/9f5afc98-ee5a-4f1a-8399-3dc6e51d0cca.png"
     },
     {
-      name: "Priya Patel",
-      role: "Brand Storyteller", 
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=600&fit=crop&crop=face"
-    },
-    {
-      name: "James Kim",
-      role: "Script Doctor",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=600&fit=crop&crop=face"
-    },
-    {
-      name: "Elena Volkov", 
-      role: "Creative Producer",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=600&fit=crop&crop=face"
-    },
-    {
-      name: "David Thompson",
-      role: "Comedy Writer",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=600&fit=crop&crop=face"
+      name: "Vikram Singh",
+      role: "Script Doctor", 
+      image: "/lovable-uploads/02bc8c98-1380-49bd-867f-a15df619a244.png"
     }
   ];
 
@@ -45,14 +30,14 @@ export const Writers = () => {
         </div>
 
         {/* Writers Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {writers.map((writer, index) => (
             <div 
               key={writer.name}
               className="text-center group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-[3/4] mb-2 rounded-lg overflow-hidden">
+              <div className="aspect-[3/4] mb-4 rounded-lg overflow-hidden">
                 <img 
                   src={writer.image} 
                   alt={writer.name}
@@ -60,11 +45,11 @@ export const Writers = () => {
                 />
               </div>
               
-              <h3 className="text-sm font-semibold text-text-primary mb-1">
+              <h3 className="text-lg font-semibold text-text-primary mb-2">
                 {writer.name}
               </h3>
               
-              <p className="text-xs text-samurai-red font-medium">
+              <p className="text-sm text-samurai-red font-medium">
                 {writer.role}
               </p>
             </div>
