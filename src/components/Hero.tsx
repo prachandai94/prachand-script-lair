@@ -12,7 +12,7 @@ export const Hero = () => {
     }
   };
   return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
-    backgroundColor: "#f5f1e8",
+    backgroundColor: "hsl(0, 75%, 45%)",
     backgroundImage: `url(${heroBg})`,
     backgroundSize: "contain",
     backgroundPosition: "center center",
