@@ -1,4 +1,4 @@
-import { Lightbulb, FileText, Edit, Sparkles, CheckCircle } from "lucide-react";
+import { Lightbulb, FileText, Edit, Sparkles, CheckCircle, Star } from "lucide-react";
 export const Process = () => {
   const steps = [{
     icon: Lightbulb,
@@ -12,19 +12,24 @@ export const Process = () => {
     details: "2-3 weeks • Concept refinement • Story structure"
   }, {
     icon: Edit,
-    title: "Outline",
-    description: "Detailed scene-by-scene breakdown and character development",
-    details: "1-2 weeks • Beat sheets • Character arcs"
+    title: "Process",
+    description: "Exploring the right kind of method ranging from save the cat to the hero's journey to suit the story.",
+    details: "1-2 weeks • Method selection • Story structure"
   }, {
     icon: Sparkles,
-    title: "Drafts",
-    description: "Collaborative writing with table reads and rapid iteration",
-    details: "4-6 weeks • First draft • Table reads • Feedback integration"
+    title: "Outline - Beatsheet",
+    description: "Developing a comprehensive outline, beat by beat.",
+    details: "2-3 weeks • Beat sheets • Scene breakdown"
   }, {
     icon: CheckCircle,
-    title: "Polish",
-    description: "Final refinements and production-ready formatting",
-    details: "1-2 weeks • Final draft • Production notes • Delivery"
+    title: "Screenplay",
+    description: "Developing a screenplay page to page.",
+    details: "4-6 weeks • Page by page writing • Draft completion"
+  }, {
+    icon: Star,
+    title: "Polishing",
+    description: "Major dialogue writing, polishing scene, adjusting it to the desired budget.",
+    details: "1-2 weeks • Dialogue polish • Budget adjustments • Final draft"
   }];
   return <section id="process" className="py-24 bg-background-secondary/30">
       <div className="container mx-auto px-6">
@@ -50,9 +55,10 @@ export const Process = () => {
           
           {/* Connecting Lines */}
           <div className="absolute left-8 md:left-1/2 top-16 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-30" />
-          <div className="absolute left-8 md:left-1/2 top-32 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-50" />
-          <div className="absolute left-8 md:left-1/2 top-48 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-70" />
-          <div className="absolute left-8 md:left-1/2 top-64 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-90" />
+          <div className="absolute left-8 md:left-1/2 top-32 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-40" />
+          <div className="absolute left-8 md:left-1/2 top-48 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-50" />
+          <div className="absolute left-8 md:left-1/2 top-64 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-60" />
+          <div className="absolute left-8 md:left-1/2 top-80 w-px h-16 bg-samurai-red transform md:-translate-x-1/2 opacity-80" />
           
           <div className="space-y-16">
             {steps.map((step, index) => {
