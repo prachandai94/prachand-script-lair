@@ -20,7 +20,7 @@ export const Hero = () => {
   }}>
       
       {/* Subtle Overlay for text readability */}
-      <div className="absolute inset-0 bg-background/10" />
+      <div className="absolute inset-0 bg-white" />
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
