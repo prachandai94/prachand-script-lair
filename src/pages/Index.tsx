@@ -29,6 +29,18 @@ const Index = () => {
         <div className="reveal stagger-1">
           <About />
         </div>
+        
+        {/* Samurai Divider */}
+        <div className="py-8 sm:py-12 bg-background">
+          <div className="container mx-auto px-4 flex justify-center">
+            <img 
+              src="/lovable-uploads/148b1060-591b-42d4-acb8-a6962b849256.png" 
+              alt="Samurai silhouette" 
+              className="h-24 sm:h-32 md:h-40 w-auto opacity-80 filter drop-shadow-lg"
+            />
+          </div>
+        </div>
+        
         <div className="reveal stagger-2">
           <Services />
         </div>
