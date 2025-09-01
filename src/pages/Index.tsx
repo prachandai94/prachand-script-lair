@@ -34,7 +34,7 @@ const Index = () => {
         <div className="py-8 sm:py-12 bg-background">
           <div className="container mx-auto px-4 flex justify-center">
             <img 
-              src="/lovable-uploads/148b1060-591b-42d4-acb8-a6962b849256.png" 
+              src="/lovable-uploads/193a570d-71c6-437f-be7a-7ea0740f8df0.png" 
               alt="Samurai silhouette" 
               className="h-24 sm:h-32 md:h-40 w-auto opacity-80 filter drop-shadow-lg"
             />
