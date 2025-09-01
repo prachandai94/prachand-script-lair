@@ -35,7 +35,7 @@ export const Services = () => {
     {
       icon: Presentation,
       title: "Pitch Decks & Treatments",
-      description: "good words are best shown beautifully, in the deck before the lens.",
+      description: "Good words are best shown beautifully, in the deck first before the lens.",
       deliverables: ["Visual pitch decks", "Story treatments", "Mood boards", "Investor packages"]
     }
   ];
