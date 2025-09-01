@@ -29,7 +29,7 @@ export const Hero = () => {
           <img 
             src="/lovable-uploads/536865e8-176d-4d94-8c25-2a112458ec03.png" 
             alt="Scripts Logo" 
-            className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto mx-auto mb-6 drop-shadow-2xl"
+            className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto mx-auto mb-6 drop-shadow-2xl"
           />
         </div>
         
