@@ -16,6 +16,11 @@ export const Writers = () => {
       name: "Sanchit Chadha",
       role: "Script Doctor", 
       image: "/lovable-uploads/02bc8c98-1380-49bd-867f-a15df619a244.png"
+    },
+    {
+      name: "Arjun Mehta",
+      role: "Story Consultant", 
+      image: "/lovable-uploads/e61a2bb6-842a-46cd-8080-bfc44f095ace.png"
     }
   ];
 
@@ -31,54 +36,31 @@ export const Writers = () => {
 
         {/* Writers Grid */}
         <div className="max-w-4xl mx-auto">
-          {/* Mobile Triangle Layout */}
-          <div className="grid md:hidden gap-4">
-            {/* Top row - Two writers */}
-            <div className="grid grid-cols-2 gap-3 max-w-sm mx-auto">
-              {writers.slice(0, 2).map((writer, index) => (
-                <div 
-                  key={writer.name}
-                  className="text-center group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="aspect-[3/4] mb-2 rounded-lg overflow-hidden">
-                    <img 
-                      src={writer.image} 
-                      alt={writer.name}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  
-                  <h3 className="text-sm font-semibold text-text-primary">
-                    {writer.name}
-                  </h3>
-                </div>
-              ))}
-            </div>
-            
-            {/* Bottom row - One writer centered */}
-            <div className="flex justify-center">
+          {/* Mobile 2x2 Grid Layout */}
+          <div className="grid md:hidden grid-cols-2 gap-3 max-w-sm mx-auto">
+            {writers.map((writer, index) => (
               <div 
-                className="text-center group w-32"
-                style={{ animationDelay: `${2 * 0.1}s` }}
+                key={writer.name}
+                className="text-center group"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="aspect-[3/4] mb-2 rounded-lg overflow-hidden">
                   <img 
-                    src={writers[2].image} 
-                    alt={writers[2].name}
+                    src={writer.image} 
+                    alt={writer.name}
                     className="w-full h-full object-cover transition-transform group-hover:scale-105"
                   />
                 </div>
                 
                 <h3 className="text-sm font-semibold text-text-primary">
-                  {writers[2].name}
+                  {writer.name}
                 </h3>
               </div>
-            </div>
+            ))}
           </div>
           
           {/* Desktop Layout */}
-          <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8">
             {writers.map((writer, index) => (
               <div 
                 key={writer.name}
