@@ -18,7 +18,7 @@ export const Writers = () => {
       image: "/lovable-uploads/5eed76e5-bab5-4176-b5e8-7427985c4077.png"
     },
     {
-      name: "Arjun Mehta",
+      name: "Sumedh Kankal",
       role: "Story Consultant", 
       image: "/lovable-uploads/b041bb5b-d738-44ff-a6cc-750be7b3e2a9.png"
     }
