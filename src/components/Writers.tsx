@@ -15,7 +15,7 @@ export const Writers = () => {
     {
       name: "Sanchit Chadha",
       role: "Script Doctor", 
-      image: "/lovable-uploads/34217bd3-9623-49f0-ba1c-8065439bd4a8.png"
+      image: "/lovable-uploads/5eed76e5-bab5-4176-b5e8-7427985c4077.png"
     },
     {
       name: "Arjun Mehta",
