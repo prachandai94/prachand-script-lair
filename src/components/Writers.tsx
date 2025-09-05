@@ -5,7 +5,7 @@ export const Writers = () => {
     {
       name: "Alii Khan",
       role: "Lead Screenwriter",
-      image: "/lovable-uploads/42ffc777-ea98-47ca-9c1b-70e2001b94d5.png"
+      image: "/lovable-uploads/66b86315-5d96-495c-95b6-d163cffddad2.png"
     },
     {
       name: "Divith Shetty", 
