@@ -8,10 +8,15 @@ export const ScriptDownload = () => {
           <p className="text-lg text-text-primary mb-4">
             Want to read a script we wrote? Here's something released!
           </p>
-          <button className="inline-flex items-center gap-2 bg-samurai-red hover:bg-samurai-red/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+          <a 
+            href="https://smallpdf.com/file#s=0bf06bbe-c5a2-46e8-93af-667e1c885da3"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-samurai-red hover:bg-samurai-red/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
             <Download size={20} />
             Download Now
-          </button>
+          </a>
         </div>
       </div>
     </section>
