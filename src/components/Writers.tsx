@@ -10,7 +10,7 @@ export const Writers = () => {
     {
       name: "Divith Shetty", 
       role: "Creative Director",
-      image: "/lovable-uploads/9f5afc98-ee5a-4f1a-8399-3dc6e51d0cca.png"
+      image: "/lovable-uploads/2253b475-95b2-4ccf-b8a5-1c5085e30d70.png"
     },
     {
       name: "Sanchit Chadha",
