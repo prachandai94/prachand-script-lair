@@ -20,7 +20,7 @@ export const Writers = () => {
     {
       name: "Arjun Mehta",
       role: "Story Consultant", 
-      image: "/lovable-uploads/5ed81d98-59cc-43df-b6c6-1c61f9ecce8d.png"
+      image: "/lovable-uploads/b041bb5b-d738-44ff-a6cc-750be7b3e2a9.png"
     }
   ];
 
