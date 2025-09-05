@@ -54,7 +54,7 @@ export const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 text-text-primary">
-            Get <span className="text-samurai-red brush-stroke">W</span>
+            Get Winning with Good Writing!
           </h2>
           <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-6">Ready to bring your story to life? Brands like WWE, Aazhol, Timezone and countless Directors & Producers trust us across the board!</p>
