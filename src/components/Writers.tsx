@@ -35,16 +35,16 @@ export const Writers = () => {
         </div>
 
         {/* Writers Grid */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Mobile 2x2 Grid Layout */}
-          <div className="grid md:hidden grid-cols-2 gap-3 max-w-sm mx-auto">
+          <div className="grid md:hidden grid-cols-2 gap-4 max-w-md mx-auto">
             {writers.map((writer, index) => (
               <div 
                 key={writer.name}
                 className="text-center group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-[3/4] mb-2 rounded-lg overflow-hidden">
+                <div className="aspect-[3/4] mb-3 rounded-lg overflow-hidden">
                   <img 
                     src={writer.image} 
                     alt={writer.name}
@@ -52,7 +52,7 @@ export const Writers = () => {
                   />
                 </div>
                 
-                <h3 className="text-sm font-semibold text-text-primary">
+                <h3 className="text-base font-semibold text-text-primary">
                   {writer.name}
                 </h3>
               </div>
@@ -60,14 +60,14 @@ export const Writers = () => {
           </div>
           
           {/* Desktop Layout */}
-          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-10">
             {writers.map((writer, index) => (
               <div 
                 key={writer.name}
                 className="text-center group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="aspect-[3/4] mb-4 rounded-lg overflow-hidden">
+                <div className="aspect-[3/4] mb-6 rounded-lg overflow-hidden">
                   <img 
                     src={writer.image} 
                     alt={writer.name}
@@ -75,7 +75,7 @@ export const Writers = () => {
                   />
                 </div>
                 
-                <h3 className="text-lg font-semibold text-text-primary mb-2">
+                <h3 className="text-xl font-semibold text-text-primary mb-2">
                   {writer.name}
                 </h3>
               </div>

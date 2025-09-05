@@ -8,7 +8,7 @@ import { Blogs } from "@/components/Blogs";
 import { Process } from "@/components/Process";
 import { Contact } from "@/components/Contact";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
-import { Footer } from "@/components/Footer";
+import { ScriptDownload } from "@/components/ScriptDownload";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Index = () => {
@@ -54,11 +54,13 @@ const Index = () => {
           <Process />
         </div>
         <div className="reveal stagger-2">
+          <ScriptDownload />
+        </div>
+        <div className="reveal stagger-2">
           <Contact />
         </div>
       </main>
       <PreFooterCTA />
-      <Footer />
     </div>
   );
 };

@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Send, CheckCircle } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
+
 export const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -56,7 +58,25 @@ export const Contact = () => {
             Get <span className="text-samurai-red brush-stroke">Connected</span>
           </h2>
           <div className="samurai-divider mb-8 max-w-xs mx-auto" />
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">Ready to bring your story to life? Brands like WWE, Aazhol, Timezone and countless Directors & Producers trust us across the board!</p>
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-6">Ready to bring your story to life? Brands like WWE, Aazhol, Timezone and countless Directors & Producers trust us across the board!</p>
+          
+          {/* Social Media Icons */}
+          <div className="flex justify-center gap-4 mb-6">
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-samurai-red/10 hover:bg-samurai-red text-samurai-red hover:text-white flex items-center justify-center transition-colors duration-300"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a 
+              href="#" 
+              className="w-10 h-10 rounded-full bg-samurai-red/10 hover:bg-samurai-red text-samurai-red hover:text-white flex items-center justify-center transition-colors duration-300"
+              aria-label="Instagram"
+            >
+              <Instagram size={18} />
+            </a>
+          </div>
         </div>
 
         <div className="max-w-2xl mx-auto">
