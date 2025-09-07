@@ -59,6 +59,13 @@ export const Contact = () => {
           <div className="samurai-divider mb-8 max-w-xs mx-auto" />
           <p className="text-lg text-text-secondary max-w-2xl mx-auto mb-6">Ready to bring your story to life? Brands like WWE, Aazhol, Timezone and countless Directors & Producers trust us across the board!</p>
           
+          {/* Email Contact */}
+          <div className="mb-6">
+            <a href="mailto:scripts@prachandentertainment.com" className="text-samurai-red hover:text-samurai-red/80 font-semibold text-lg transition-colors duration-300">
+              scripts@prachandentertainment.com
+            </a>
+          </div>
+
           {/* Social Media Icons */}
           <div className="flex justify-center gap-4 mb-6">
             <a href="#" className="w-10 h-10 rounded-full bg-samurai-red/10 hover:bg-samurai-red text-samurai-red hover:text-white flex items-center justify-center transition-colors duration-300" aria-label="LinkedIn">
