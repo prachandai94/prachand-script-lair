@@ -7,8 +7,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Send, CheckCircle } from "lucide-react";
 import { Linkedin, Instagram } from "lucide-react";
+
 export const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,11 +19,50 @@ export const Contact = () => {
     brief: "",
     nda: false
   });
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY', // Replace with your actual access key
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          project_type: formData.projectType,
+          brief: formData.brief,
+          nda_required: formData.nda ? 'Yes' : 'No',
+          subject: `New Project Inquiry from ${formData.name}`,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => setIsSubmitted(false), 5000);
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          projectType: "",
+          brief: "",
+          nda: false
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting the form. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({
@@ -131,8 +172,14 @@ export const Contact = () => {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" variant="samurai" size="lg" className="w-full group h-12 text-base">
-              Send Project Brief
+            <Button 
+              type="submit" 
+              variant="samurai" 
+              size="lg" 
+              className="w-full group h-12 text-base" 
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Send Project Brief'}
               <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
 
