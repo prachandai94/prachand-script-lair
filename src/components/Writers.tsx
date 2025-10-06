@@ -46,7 +46,7 @@ export const Writers = () => {
             {writers.map((writer, index) => (
               <div 
                 key={writer.name}
-                className="text-center group"
+                className={`text-center group ${index === 4 ? 'col-span-2 max-w-[50%] mx-auto' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="aspect-[3/4] mb-4 rounded-lg overflow-hidden">
