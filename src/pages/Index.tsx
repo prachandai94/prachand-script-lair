@@ -4,7 +4,6 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Writers } from "@/components/Writers";
 import { Services } from "@/components/Services";
-import { Blogs } from "@/components/Blogs";
 import { Process } from "@/components/Process";
 import { Contact } from "@/components/Contact";
 import { PreFooterCTA } from "@/components/PreFooterCTA";
@@ -46,9 +45,6 @@ const Index = () => {
         </div>
         <div className="reveal stagger-3">
           <Writers />
-        </div>
-        <div className="reveal stagger-4">
-          <Blogs />
         </div>
         <div className="reveal stagger-1">
           <Process />

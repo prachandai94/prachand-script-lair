@@ -21,6 +21,11 @@ export const Writers = () => {
       name: "Sumedh Kankal",
       role: "Story Consultant", 
       image: "/lovable-uploads/b041bb5b-d738-44ff-a6cc-750be7b3e2a9.png"
+    },
+    {
+      name: "Viven Solanki",
+      role: "Script Consultant", 
+      image: "/lovable-uploads/viven-solanki.png"
     }
   ];
 
@@ -60,7 +65,7 @@ export const Writers = () => {
           </div>
           
           {/* Desktop Layout */}
-          <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="hidden md:grid grid-cols-2 lg:grid-cols-5 gap-8">
             {writers.map((writer, index) => (
               <div 
                 key={writer.name}
